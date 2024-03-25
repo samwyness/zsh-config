@@ -48,7 +48,7 @@ load-nvmrc() {
 }
 add-zsh-hook chpwd load-nvmrc
 
-# Android SDK paths
+# Add Android SDK paths
 export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
@@ -56,5 +56,6 @@ export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 # Add Go's default installation folder to PATH
 export PATH="$PATH:$HOME/go/bin"
 
-# Load rbenv automatically
-eval "$(rbenv init - zsh)"
+# Add Ruby paths
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init - zsh)" # Load rbenv automatically
